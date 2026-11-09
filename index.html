@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IELTS 30 kunlik challenge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>IELTS 30 kunlik challenge</h1>
+    <div class="stats">
+      <span>Bajarilgan: <b id="doneCount">0</b>/30</span>
+      <span>Streak: <b id="streak">0</b> 🔥</span>
+    </div>
+    <div class="bar"><div id="barFill"></div></div>
+  </header>
+
+  <nav>
+    <button data-tab="plan" class="active">Reja</button>
+    <button data-tab="tips">Listening/Reading</button>
+    <button data-tab="writing">Writing</button>
+    <button data-tab="focus">Fokus</button>
+  </nav>
+
+  <main>
+    <section id="plan" class="tab active">
+      <div class="today" id="todayBox"></div>
+      <h2>30 kunlik reja</h2>
+      <div id="days" class="days"></div>
+    </section>
+
+    <section id="tips" class="tab">
+      <h2>Listening strategiyasi</h2>
+      <ul id="listeningTips"></ul>
+      <h2>Reading strategiyasi</h2>
+      <ul id="readingTips"></ul>
+      <h2>AI murabbiydan so'rang</h2>
+      <textarea id="coachQ" rows="3" placeholder="Masalan: True/False/Not Given da doim adashaman, nima qilay?"></textarea>
+      <button id="coachBtn" class="primary">Savol berish</button>
+      <div id="coachA" class="answer"></div>
+    </section>
+
+    <section id="writing" class="tab">
+      <h2>Writing tekshiruvi</h2>
+      <div class="row">
+        <select id="taskType">
+          <option value="task2">Task 2 (Essay, 250+ so'z)</option>
+          <option value="task1">Task 1 (Letter/Report, 150+ so'z)</option>
+        </select>
+        <button id="randomPrompt">Tasodifiy savol</button>
+        <span id="wTimer" class="timer">40:00</span>
+        <button id="wTimerBtn">Taymerni boshlash</button>
+      </div>
+      <textarea id="prompt" rows="3" placeholder="IELTS savolini shu yerga qo'ying yoki 'Tasodifiy savol' ni bosing"></textarea>
+      <textarea id="essay" rows="16" placeholder="Essayingizni shu yerga yozing..."></textarea>
+      <div class="row">
+        <span>So'zlar: <b id="wc">0</b></span>
+        <button id="evalBtn" class="primary">Tekshirish va baholash</button>
+      </div>
+      <div id="evalOut"></div>
+      <h3>Natijalar tarixi</h3>
+      <div id="history"></div>
+    </section>
+
+    <section id="focus" class="tab">
+      <h2>Fokus vositalari</h2>
+      <div class="pomo">
+        <div id="pomoMode">Fokus</div>
+        <div id="pomoTime" class="big">25:00</div>
+        <div class="row">
+          <button id="pomoStart" class="primary">Boshlash</button>
+          <button id="pomoPause">Pauza</button>
+          <button id="pomoReset">Qayta</button>
+        </div>
+        <p>Bugungi fokus sessiyalar: <b id="pomoCount">0</b></p>
+      </div>
+      <h3>Boshlashdan oldin tekshiruv</h3>
+      <ul class="check">
+        <li><label><input type="checkbox" /> Telefon boshqa xonada yoki "Do not disturb"</label></li>
+        <li><label><input type="checkbox" /> Ijtimoiy tarmoq tablari yopilgan</label></li>
+        <li><label><input type="checkbox" /> Suv va qalam tayyor</label></li>
+        <li><label><input type="checkbox" /> Bugungi aniq maqsad yozilgan</label></li>
+        <li><label><input type="checkbox" /> Quloqchin (Listening uchun) sinab ko'rilgan</label></li>
+      </ul>
+      <h3>Kunlik maqsad</h3>
+      <input id="goal" placeholder="Bugun nimaga erishmoqchisiz?" />
+      <h3>Fokus maslahatlari</h3>
+      <ul>
+        <li>25 daqiqa ishlang, 5 daqiqa dam oling; 4 sessiyadan keyin 20 daqiqa tanaffus.</li>
+        <li>Har kuni bir xil vaqtda o'qing, odat 2-3 haftada shakllanadi.</li>
+        <li>Listening mashqini ham test sharoitida bir marta eshiting, takroriy tinglash faqat tahlil uchun.</li>
+        <li>Uyqu (7-8 soat) va yurish xotira uchun mashqdan kam emas.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

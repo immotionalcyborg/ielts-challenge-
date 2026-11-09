@@ -1,0 +1,16 @@
+{
+  "name": "ielts-30-day-challenge",
+  "version": "1.0.0",
+  "description": "30 kunlik IELTS challenge: Listening, Reading maslahatlari, Writing AI tekshiruvi va fokus vositalari",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
